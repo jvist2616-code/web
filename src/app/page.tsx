@@ -51,7 +51,7 @@ export default function Dashboard() {
 
     setIsGenerating(true);
     const result = await generatePost(prompt);
-    
+
     if (result.success) {
       setPrompt("");
       fetchPosts(); // Odśwież listę
@@ -77,12 +77,12 @@ export default function Dashboard() {
           <p className="text-gray-400">Twoje treści są generowane i gotowe do publikacji.</p>
         </div>
         <div className="flex items-center gap-4">
-          <UserButton afterSignOutUrl="/" appearance={{ elements: { userButtonAvatarBox: "w-10 h-10" } }} />
+          <UserButton appearance={{ elements: { userButtonAvatarBox: "w-10 h-10" } }} />
         </div>
       </header>
 
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
-        
+
         {/* Generator Panel */}
         <div className="lg:col-span-2 space-y-8">
           <section className="bg-[#111111] border border-white/5 rounded-2xl p-6 shadow-2xl">
@@ -121,7 +121,7 @@ export default function Dashboard() {
               </svg>
               Historia postów
             </h2>
-            
+
             {loading ? (
               <div className="text-gray-500 italic">Ładowanie historii...</div>
             ) : posts.length === 0 ? (
@@ -140,7 +140,7 @@ export default function Dashboard() {
                         {new Date(post.created_at).toLocaleDateString()}
                       </span>
                     </div>
-                    
+
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="space-y-2">
                         <div className="flex justify-between items-center text-xs text-gray-500 mb-1">
@@ -152,7 +152,7 @@ export default function Dashboard() {
                           <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-[#111111] to-transparent"></div>
                         </div>
                       </div>
-                      
+
                       <div className="space-y-2">
                         <div className="flex justify-between items-center text-xs text-gray-500 mb-1">
                           <span>Video Script</span>
@@ -190,7 +190,7 @@ export default function Dashboard() {
               </div>
             </div>
           </div>
-          
+
           <div className="bg-gradient-to-br from-emerald-600/20 to-transparent border border-emerald-500/20 rounded-2xl p-6">
             <h3 className="text-emerald-400 font-semibold mb-2">Wersja Pro</h3>
             <p className="text-xs text-gray-400 leading-relaxed">
